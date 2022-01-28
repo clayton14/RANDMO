@@ -22,8 +22,8 @@ def pvtn():
             return init_vol_ * (init_temp / final_temp)
 
     if (x == 2):
-        pass
-
+        init_vol = float(input("init volume (mL): "))
+        init_pressure = float(input("init pressure (kPa): "))
 
 
 
