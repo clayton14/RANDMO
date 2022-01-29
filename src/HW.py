@@ -23,12 +23,17 @@ def main(search_terms, num_sentance, output="out.txt"):
     with open(output, "w") as f:
         for term in search_terms:
             try:
-                    summary = wikipedia.summary(term,sentences=num_sentance)
-                    print(f"[DONE]: {term}")
-                    f.writelines(f"{term}:\n{summary}\n\n")
-            except (DisambiguationError,  PageError) as e:
-                print(f"[ERROR:{term}] page not found for {term}! try and make your search terms more specific")
+                summary = wikipedia.summary(term,sentences=num_sentance)
+                print(f"[DONE]: {term}")
+                f.writelines(f"{term}:\n{summary}\n\n")
+            except  PageError as e:
+                print(f"[ERROR:{term}] page not found for {term}! try and make your search terms more specific\n")
                 continue
+            except DisambiguationError as e:
+                print(f"[ERROR:{term}] multple things are related to {term}\n{e.options}")
+
+
+
 
 
 #listh of this to to look up example x = ["minecraft", "Jacob Riis"]
@@ -40,7 +45,7 @@ def main(search_terms, num_sentance, output="out.txt"):
 # ]
 
 x = [
-    "gjdlskgj","Edward Bellamy","Suburban", "steel frame", "Urban sprawl", "public transit", 
+    "sprawl","Edward Bellamy","Suburban", "steel frame", "Urban sprawl", "public transit", 
 ]
 main(x, 3, output="out.txt")
 #earch_test()
