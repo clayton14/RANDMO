@@ -48,5 +48,5 @@ def main() -> float:
 
 if __name__ == "__main__":
     answer = main()
-    print(answer)
+    print(f"The answer is => {answer}")
    
