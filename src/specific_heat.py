@@ -20,24 +20,28 @@ def main() -> float:
                 M = float(input("Enter the mass (g): "))
                 Ti = float(input("Enter the init temp (C): "))
                 Tf = float(input("Enter the final temp (C): "))
-                return M * C * (Tf - Ti)
+                print(f"The answer is => {M * C * (Tf - Ti)} J")
+                continue
             elif(choice == 2):
                 Q = float(input("Enter the energy (j): "))
                 M = float(input("Enter the mass (g): "))
                 Ti = float(input("Enter the init temp (C): "))
                 Tf = float(input("Enter the final temp (C): "))
-                return Q / M * (Tf - Ti)
+                print( f"The answer is => {Q / M * (Tf - Ti)} J/gC")
+                continue
             elif(choice == 3):
                 Q = float(input("Enter the energy (j): "))
                 M = float(input("Enter the mass (g): "))
                 C = float(input("Enter the specific heat (j/gC): "))
-                return Q / (M * C)
+                print(f"The answer is => {Q / (M * C)} C")
+                continue
             elif(choice == 4):
                 Q = float(input("Enter the energy (j): "))
                 C = float(input("Enter the specific heat (j/gC): "))
                 Ti = float(input("Enter the init temp (C): "))
                 Tf = float(input("Enter the final temp (C): "))
-                return Q / C * (Tf - Ti)
+                print(f"The answer is => {Q / C * (Tf - Ti)} g")
+                continue
         except ValueError as err:
             print("[ERROR] entered value must be a number")
             continue
@@ -45,8 +49,6 @@ def main() -> float:
             print("[ERROR] can't devide by zero")
 
 
-
 if __name__ == "__main__":
-    answer = main()
-    print(f"The answer is => {answer}")
+    main()
    
