@@ -1,3 +1,0 @@
-minecraft : Minecraft is a sandbox video game developed by the Swedish video game developer Mojang Studios. The game was created by Markus "Notch" Persson in the Java programming language. Following several early private testing versions, it was first made public in May 2009 before fully releasing in November 2011, with Jens "Jeb" Bergensten then taking over development.
-
-
