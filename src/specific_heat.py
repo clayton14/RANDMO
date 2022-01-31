@@ -1,7 +1,4 @@
-import sys, os
-
 delta = '\u0394'
-
 
 def main() -> float:
     while True:
