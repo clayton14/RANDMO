@@ -20,7 +20,17 @@ def main() -> float:
             Ti = float(input("Enter the init temp (C): "))
             Tf = float(input("Enter the final temp (C): "))
             return M * C * abs(Tf - Ti)
-
+        elif(choice == 2):
+            Q = float(input("Enter the energy (j): "))
+            M = float(input("Enter the mass (g): "))
+            Ti = float(input("Enter the init temp (C): "))
+            Tf = float(input("Enter the final temp (C): "))
+            return Q / M * abs(Tf - Ti)
+        elif(choice == 3):
+            Q = float(input("Enter the energy (j): "))
+            M = float(input("Enter the mass (g): "))
+            C = float(input("Enter the specific heat (j/gC): "))
+            return Q / (M * C)
 
 
 if __name__ == "__main__":
