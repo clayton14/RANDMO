@@ -47,6 +47,9 @@ def main() -> float:
             continue
         except ZeroDivisionError as err:
             print("[ERROR] can't devide by zero")
+        except KeyboardInterrupt as err:
+            print("\n[EXIT]")
+            break
 
 
 if __name__ == "__main__":
